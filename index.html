@@ -6,6 +6,7 @@
     <title>Pizza Finder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
   <section class="section">
@@ -16,24 +17,88 @@
       <p class="subtitle">
         Find the best deal near you with  <strong>Pizza Finder</strong>!
       </p>
-      
+      <form id="myform">
       <nav class="panel">
-        <p class="panel-heading is-size-4">
-          Choose Topping 
-        <label class="panel-block">
-          <input type="checkbox">
-          remember me
-        </label>
-        <div class="panel-block">
-          <button class="button is-link is-outlined is-fullwidth">
-            reset all filters
-          </button>
-        </div>
+        <p class="panel-heading is-size-4 has-text-weight-semibold">
+          Choose Number of Toppings
+        </p>
+
+        <div class="field has-addons">
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select name="number of Toppings">
+                      <option value="# of Toppings"># of Toppings</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="control">
+                  <button type="submit" class="button is-primary">Submit</button>
+                </div>
+              </div>
       </nav>
-      <input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range">
+      <nav class="panel">
+        <p class="panel-heading is-size-4 has-text-weight-semibold">
+          Choose Size of Pizza
+        </p>
+        <label class="panel-block">
+          <input type="radio" name="size">
+          Small
+        </label>
 
+        <label class="panel-block">
+          <input type="radio" name="size">
+          Medium
+        </label>
 
+        <label class="panel-block">
+          <input type="radio" name="size">
+          Large
+        </label>
+      </nav>
+      <nav class="panel">
+        <p class="panel-heading is-size-4 has-text-weight-semibold">
+          Choose Price
+        </p>
+        <label class="panel-block">
+          <input type="radio" name="price">
+          $
+        </label>
+
+        <label class="panel-block">
+          <input type="radio" name="price">
+          $$
+        </label>
+
+        <label class="panel-block">
+          <input type="radio" name="price">
+          $$$
+        </label>
+      </nav>
+      
+      <div class="field is-grouped is-grouped-centered">
+        <input class="button is-primary" type="submit" value="Submit input">
+        <input onclick="reset()" class="button" type="reset" value="Reset input">
+      </div>
+    </form>
     </div>
   </section>
   </body>
+
+  <script>
+  function reset(){
+    $("#myform")[0].reset();}
+    </script>
 </html>
