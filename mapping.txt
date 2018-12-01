@@ -1,0 +1,26 @@
+C: cheese ; weight: 0 , 0.5 , 1, 1.5, 2 , 3 ; portion: 1/2, 1/1, 2/2
+
+X: pizza sauce ;weight: 0.5 , 1, 1.5
+
+Q: bbq sauce ; weight: 0.5, 1, 1.5
+
+K: Bacon
+
+Z: Hot banana peppers
+
+Rp: roasted red peppers
+
+Sp: baby spinach
+
+J: Jalapeno Peppers
+
+T: tomatoes
+
+O: onions
+
+N: pineapple
+
+G: green pepper
+
+V: green olives
+
