@@ -2,14 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (request, response) => {
-  response.send('Hello from Express!')
-})
-
-app.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
-})
+app.use(express.static(__dirname + '/site'));
+app.get('/', function (req, res, next) {
+    res.sendFile(__dirname + '/index.html')
+});
+server.listen(3000);
+console.log("Server started.");
