@@ -17,7 +17,7 @@
       <p class="subtitle">
         Find the best deal near you with  <strong>Pizza Finder</strong>!
       </p>
-      
+      <form id="myform">
       <nav class="panel">
         <p class="panel-heading is-size-4 has-text-weight-semibold">
           Choose Number of Toppings
@@ -89,18 +89,16 @@
       </nav>
       
       <div class="field is-grouped is-grouped-centered">
-        <p class="control">
-          <a class="button is-primary">
-            Submit
-          </a>
-        </p>
-        <p class="control">
-          <a class="button is-light">
-            Reset Filters
-          </a>
-        </p>
+        <input class="button is-primary" type="submit" value="Submit input">
+        <input onclick="reset()" class="button" type="reset" value="Reset input">
       </div>
+    </form>
     </div>
   </section>
   </body>
+
+  <script>
+  function reset(){
+    $("#myform")[0].reset();}
+    </script>
 </html>
