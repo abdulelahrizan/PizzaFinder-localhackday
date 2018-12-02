@@ -38,7 +38,8 @@ def send_request(toppings, i, weight, portion, size):
         global max_pizza_value
         if (pizza_value > max_pizza_value):
             max_pizza_value = pizza_value
-            combination = [i, weight, portion, size]
+            global pizza_combination 
+            pizza_combination = [str(i), str(weight), str(portion), str(size), str(price)]
 
 toppings = ["C", "X", "Q", "K", "Z", "Rp", "Sp", "J", "T", "O", "N", "G", "V"]
 cheese_weights = ["0",  "0.5", "1", "1.5", "2", "3"]
@@ -55,9 +56,10 @@ for portion in portions:
             for i in range(1, toppings_count-1):
                 send_request(toppings, i, weight, portion, size)
 
-print("Best pizza value: " + max_pizza_value)
+print("Best pizza value: " + str(max_pizza_value))
 print("Deal: ")
-print("Toppings: " + combination[0])
-print("Weight: " + combination[1])
-print("Portion: " + combination[2])
-print("Size: " + combination[3])
+print("Toppings: " + pizza_combination[0])
+print("Weight: " + pizza_combination[1])
+print("Portion: " + pizza_combination[2])
+print("Size: " + pizza_combination[3])
+print("Price: " + pizza_combination[4])
